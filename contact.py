@@ -57,11 +57,11 @@ class Contact:
     @classmethod
     def display_contacts(cls):
         '''
-        method that returns the contact list
+        Method that returns the contact list
         '''
         return cls.contact_list
     @classmethod
-    def copy_email(self, number):
+    def copy_email(cls, number):
         contact_found = Contact.find_by_number(number)
         pyperclip.copy(contact_found.email)
         
