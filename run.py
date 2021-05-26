@@ -38,11 +38,11 @@ def display_contacts():
     '''
     return Contact.display_contacts()
 
-def email_copy(email):
+def email_copy(number):
     '''
     Function that copies the email address to the clipboard.
     '''
-    return Contact.copy_email(email)
+    return Contact.copy_email(number)
 # Main
 def main():
     print('Hello Welcome to your contact list. What is your name?')
@@ -120,11 +120,10 @@ def main():
             copy_number = input()
             if check_existing_contacts(copy_number):
                 copy_contact = find_contact(copy_number)
-                email = copy_contact.email
-                email_copy(email)
-                print("/n")
-                print(f"{email} copied to clipboard.")
-                print("/n")
+                email_copy(copy_contact.phone_number)
+                print("\n")
+                print(f"{copy_contact.email} copied to clipboard.")
+                print("\n")
                 print('-' * 20)
             else:
                 print("That contact does not exist")
