@@ -32,3 +32,8 @@ def display_contacts():
     Function that returns all the saved contacts
     '''
     return Contact.display_contacts()
+def email_copy(number):
+    '''
+    Function that copies the email address to the clipboard.
+    '''
+    return Contact.copy_email(number)
